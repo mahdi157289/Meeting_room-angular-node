@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="upper-section">
+    <div class="description">
+      <h2>we provide a big variety of meeting rooms in our establichment, feel free to make any reservation you want</h2>
+      <img class="slide im" src="../assets/s1.jpeg" alt="s1" >
+      
+    </div>
+    
+  </div>
+  <div class="lower-section"></div>
+</div>
+<section>
+  <form>
+    <input type="text" placeholder="Filter by city">
+    <button class="primary" type="button">Search</button>
+  </form>
+</section>
+
+<section class="results">
+  <app-room-location  *ngFor="let meetingRoom of meetingRoomss" [meetingRoom]="meetingRoom"></app-room-location> 
+ </section>
+<section class="results">
+ <app-room-location  *ngFor="let meetingRoom of meetingRooms" [meetingRoom]="meetingRoom"></app-room-location> 
+</section>

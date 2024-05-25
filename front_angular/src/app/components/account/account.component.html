@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="first">
+  <div class="bubble-1">
+    <h3 class="details-header" (click)="toggleDetails()">
+      <mat-icon>account_box</mat-icon>
+    </h3>
+    <div class="details" *ngIf="!hideDetails" [class.details-hide]="hideDetails">
+      <p>Fullname: {{ user.fullName }}</p>
+      <p>username: {{ user.username }}</p>
+      <p><mat-icon>email</mat-icon>&nbsp;{{ user.email }}</p>
+      <p> <mat-icon>phone</mat-icon>&nbsp; {{ user.phone }}</p>
+      <br/>
+    </div>
+  </div>
+  <div class="bubble-1">
+    <h3 class="details-header" (click)="toggleDetails1()">
+      <mat-icon>email</mat-icon>
+    </h3>
+    <div class="details1" *ngIf="!hideDetails1" [class.details-hide]="hideDetails">
+
+      <p>{{ user.email }}</p>
+
+    </div>
+  </div>
+</div>
+
+<div class="second">
+  <div class="bubble-2">
+    <div class="table-main-header">Current Reservations :</div>
+    <table class="table-container">
+      <thead>
+        <tr>
+          <th>
+            <h4>Room name</h4>
+          </th>
+          <th>
+            <h4>day </h4>
+          </th>
+          <th>
+            <h4>hours</h4>
+          </th>
+          <th>
+            <h4>purpose</h4>
+          </th>
+          <th>
+            <h4>Actions</h4>
+          </th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let userReservation of userReservations">
+        <tr>
+          <td>{{ userReservation.meetingRoomName }}</td>
+          <td>{{ userReservation.day }}</td>
+          <td>{{ userReservation.reservedHours }}</td>
+          <td>{{ userReservation.purpose }}</td>
+          <td>
+            <button (click)="deleteReservation(userReservation)" class="button">
+              Delete
+            </button>
+            <button class="button"
+              (click)="openReservationPage(userReservation._id,userReservation.meetingRoom)">Modify</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

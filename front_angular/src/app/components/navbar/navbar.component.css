@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 5px;
+  padding-top: 10px;
+}
+@font-face {
+  font-family: 'MyFont';
+  src: url('../assets/fonts/Myfont.ttf');
+}
+.navbar-brand {
+  background-image: url("../assets/logo.png");
+  font-size: 4vh;
+  color: black;
+  font-family: inter;
+  cursor: pointer;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  padding-right: 40px;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+  font-family: 'MyFont';
+  font-size: 4vh;
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+.login-link {
+  color: white;
+  text-decoration: none;
+  font-family: inter;
+  font-size: 3vh;
+}
+
+.nav-link:hover {
+  color: #ddd;
+}
+
+.active {
+  font-weight: bold;
+}

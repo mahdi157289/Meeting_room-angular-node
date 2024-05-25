@@ -1,0 +1,156 @@
+
+
+.container {
+  width: 95%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+
+  padding-top: 20px;
+
+}
+
+.bubble-1 {
+  width: 100%;
+  padding-bottom: 10px;
+  background: rgba(23, 25, 144, 1);
+  border-radius: 10px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+margin-top: 25px;
+}
+
+
+
+
+
+.bubble-1 p , .bubble-2 h4 {
+  font-family: 'MyFont';
+ 
+  display: flex;
+  justify-content: center;
+}
+.bubble-1 p,
+.bubble-2 h4 {
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: #f5f5f5;
+  transition: background 0.3s ease;
+}
+.bubble-1 p:hover , .bubble-2 h4:hover ,bubble-1 {
+  background: rgb(23,35,61);
+  color: white;
+background: linear-gradient(90deg, rgba(23,35,61,1) 0%, rgba(23,25,144,1) 51%, rgba(23,35,61,1) 100%);}
+.Details {
+  padding-left: 25px;
+}
+.details-hide {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.details-show {
+  height: auto;
+  overflow: visible;
+  transition: height 0.5s ease;
+}
+@font-face {
+  font-family: 'MyFont';
+  src: url('../assets/fonts/Myfont.ttf');
+}
+
+.details-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'MyFont';
+ width: 100%;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 25px;
+}
+.details-header:hover {
+  border-radius: 50%;
+  background-color: white;
+}
+
+.bubble-2 {
+  padding-left: 20px;
+  margin-top: 22px;
+ margin-left: 10px;
+  height: auto;
+  background: rgba(23, 25, 144, 1);
+  border-radius: 10px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  
+}
+
+tr {
+  text-align: center;
+  font-size: 14px;
+}
+
+th {
+  width: 40vh;
+}
+
+th,
+td {
+  padding: 4px;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-main-header {
+
+  font-size: 25px;
+  margin-left: 10px;
+  margin-top: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-family: "MyFont";
+  font-weight: 800;
+  font-style: normal;
+}
+
+.button {
+  background-color: rgba(23, 35, 61, 1);
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: Inter;
+  font-size: 0.6rem;
+  font-weight: 400;
+  line-height: 0.3rem;
+  text-align: center;
+  text-decoration: none #6b7280 solid;
+  text-decoration-thickness: auto;
+  transition-duration: 0.2s;
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+}
+
+.button:hover {
+  background-color: #374151;
+}
+
+.button:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 0.55rem 1.2rem;
+  }
+}

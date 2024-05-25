@@ -1,0 +1,104 @@
+.container {
+  margin-top: 10px;
+}
+.upper-section {
+  background-image: url("../assets/dash-background2.jpg");
+  height:600px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.description {
+  background-color: black;
+  width: 450px;
+  height: 600px;
+  padding-left: 50px;
+  font-family: Inter;
+  font-size: 16px;
+  color: white;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+
+   
+}
+.description h2 {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color:#3f51b5;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.description h2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.description h2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #007bff; /* blue color */
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+
+
+.results {
+  display: grid;
+  column-gap: 14px;
+  row-gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  margin-top: 50px;
+  justify-content: space-around;
+}
+
+input[type="text"] {
+  border: solid 1px var(--primary-color);
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 4px;
+  display: inline-block;
+  width: 30%;
+}
+
+button {
+  padding: 10px;
+  border: solid 1px var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .results {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  input[type="text"] {
+      width: 70%;
+  }   
+}
+
+@media (max-width: 499px) {
+  .results {
+      grid-template-columns: 1fr;
+  }    
+}

@@ -1,0 +1,14 @@
+<article>
+  <img *ngIf="room && room.photos && room.photos[0]" [src]="room.photos[0].url" alt="Exterior photo of the meeting room">
+  <section class="listing-description">
+    <h2 class="listing-heading">{{room?.name}}</h2>
+    <p class="listing-location">{{room?.location}}</p>
+  </section>
+  <section class="listing-features">
+    <h2 class="section-heading">About this housing location</h2>
+    <ul>
+      <li>Units capacity: {{room?.capacity}}</li>
+      <li>Does this location have equipment: {{room?.equipment}}</li>
+    </ul>
+  </section>
+</article>

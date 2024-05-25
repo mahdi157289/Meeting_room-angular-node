@@ -1,0 +1,18 @@
+<section class="listing">
+  <img *ngIf="meetingRoom.photos" class="listing-photo" [src]="meetingRoom.photos" alt="Exterior photo of {{meetingRoom.name}}">
+    <ng-template #loading>
+      <img class="listing-photo" src="path/to/loading-image.gif" alt="Loading image">
+    </ng-template>
+    <h2 class="listing-heading">{{ meetingRoom.name }}</h2>
+    <p class="listing-location">{{ meetingRoom.location}} </p>
+    <p class="listing-location">capacity: {{ meetingRoom.capacity}} </p>
+    <p class="listing-location">equipment:{{ meetingRoom.equipment}} </p>
+    <div class="btn"><button
+      (click)="openReservationPage(meetingRoom)"
+      class="button-40"
+    >
+      Reservation
+    </button>
+  </div>
+    
+  </section>
