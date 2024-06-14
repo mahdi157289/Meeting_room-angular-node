@@ -21,9 +21,14 @@ export class MeetingRoomService {
       return this.httpClient.post(this.baseURL, meetingRoom, { headers: headers });
     }
   
+   
+
+
     deleteMeetingRoom(id: string): Observable<Object> {
-      return this.httpClient.delete(`${this.baseURL}/${id}`);
+      return this.httpClient.delete(`${this.baseURL}/meeting-rooms/${id}`);
     }
+
+
   
     getMeetingRoomById(id: string): Observable<MeetingRoom> {
       return this.httpClient.get<MeetingRoom>(`${this.baseURL}/${id}`);

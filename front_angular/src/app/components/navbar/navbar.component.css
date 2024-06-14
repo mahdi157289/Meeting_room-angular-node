@@ -11,7 +11,7 @@
   src: url('../assets/fonts/Myfont.ttf');
 }
 .navbar-brand {
-  background-image: url("../assets/logo.png");
+  
   font-size: 4vh;
   color: black;
   font-family: inter;

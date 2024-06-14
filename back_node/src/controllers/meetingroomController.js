@@ -41,6 +41,21 @@ const getMeetingRoomById = async (req, res) => {
   }
 };
 
+const deleteMeetingRoom = async (req, res) => { try {
+  const id = req.params.id;
+  console.log(id);
+  const meetingRoom = await MeetingRoom.findByIdAndRemove(id);
+  console.log(meetingRoom);
+  if (!meetingRoom) {
+    return res.status(404).json({ message: 'Meeting room not found' });
+  }
+  res.json({ message: 'Meeting room deleted successfully' });
+} catch (err) {
+  console.error(err);
+  res.status(500).json({ message: 'Error deleting meeting room' });
+}
+};
+
 const updateMeetingRoom = async (req, res) => {
   const { id } = req.params;
   try {
@@ -105,4 +120,5 @@ module.exports = {
   getMeetingRoomById,
   updateMeetingRoom,
   getAvailableHoursForDay,
+  deleteMeetingRoom,
 };

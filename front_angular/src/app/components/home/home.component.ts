@@ -12,11 +12,27 @@ import { RoomLocationComponent } from '../room-location/room-location.component'
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  filteredLocationList: MeetingRoom[] = [];
 
-  constructor(
-    private meetingRoomService: MeetingRoomService,
-
-  ) { }
+  constructor(private meetingRoomService: MeetingRoomService) { 
+    this.meetingRoomService.getMeetingRoomList().subscribe((result: MeetingRoom[]) => {
+      this.filteredLocationList = result;
+    });
+  }
+  filterResults(text: string) {
+    if (!text) {
+      this.filteredLocationList = this.meetingRooms;
+      
+      return;
+    }
+    this.filteredLocationList = this.meetingRooms.filter(
+      housingLocation => housingLocation?.location.toLowerCase().includes(text.toLowerCase())
+    );
+    this.meetingRoomss = this.meetingRoomss.filter(
+      housingLocation => housingLocation?.location.toLowerCase().includes(text.toLowerCase())
+    );
+  }
+  
   ngOnInit() {
     this.meetingRoomService.getMeetingRoomList().subscribe((data) => {
       this.meetingRooms = data;

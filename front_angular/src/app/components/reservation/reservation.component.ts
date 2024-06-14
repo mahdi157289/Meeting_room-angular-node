@@ -49,6 +49,7 @@ export class ReservationComponent {
   }
   deleteMeetingRoom(meetingRoom: MeetingRoom): void {
     const toDelete = window.confirm("Are you sure you want to delete this meeting room?");
+   
     if (toDelete && meetingRoom._id ) {
       this.meetingRoomService.deleteMeetingRoom(meetingRoom._id).subscribe(() => {
         window.alert("Meeting room deleted successfully !")
